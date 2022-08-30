@@ -1,0 +1,28 @@
+// @use 'src/assets/sass/base';
+$blue: #5406BB;
+$white: #fff;
+$yellow: #FFFF00;
+$red: red;
+$light-grey: #f2f2f2;
+$grey: #d9d9d9;
+
+.mainDiv{
+    background-color: $blue;
+    width: 100%;
+    height: 100%;
+    padding: 3.5em 10em 7.5em 10em;
+}
+.text-white{
+    color: $white;
+}
+.subDiv{
+    float:none;
+    margin:auto;
+    color: $white
+}
+.formGroup{
+    margin-top: 1.5em;
+    border:1px solid $white;
+    padding: 2.5em;
+    border-radius: 15px;
+}
