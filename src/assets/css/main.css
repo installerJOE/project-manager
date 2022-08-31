@@ -74,8 +74,8 @@ p{
 .text-purple{
     color: #6610f2;
 }
-.text-peach{
-    color: #f56a6a;
+.text-yellow{
+    color: yellow;
 }
 .text-grey{
     color: #828282;
@@ -228,8 +228,23 @@ p{
 .mt-5{
     margin-top: 5em !important;
 }
+
+/* Styling of links */
+.link-text{
+    text-decoration: underline !important;
+}
+.link-text-white:hover{
+    color: yellow;
+}
+
+
 .width-100{
     width: 100%;
+}
+.short-hr{
+    margin-top:0px;
+    height: 10px;
+    background-color: #fff;
 }
 
 @media only screen and (max-width: 585px){

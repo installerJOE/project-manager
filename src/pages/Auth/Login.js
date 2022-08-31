@@ -1,21 +1,23 @@
 import { useState } from "react"
-
-
+import { Link, useNavigate } from "react-router-dom"
+import Layout from "../../components/Auth/Layout"
 
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
- 
+  let navigate = useNavigate()
+
   const handleLogin = (e) => {
     e.preventDefault();
     console.log("You are logged in");
+    navigate('/dashboard')
   }
   
-  
   return (
-    <div>
+    <Layout>
       <form onSubmit={handleLogin}>
-        <h3 className="caption-header text-center"> Login </h3>
+        <h3 className="caption-header text-center text-yellow"> Login </h3>
+        <hr class="short-hr"/>
         <div className='form-group'>
           <label>
             Email Address
@@ -40,13 +42,29 @@ const Login = () => {
             onChange={e => setPassword(e.target.value)}
           />
         </div>
-        <div className='form-group'>
+
+        <div className='form-group mt-1'>
+          Forgot your password?&nbsp;
+          <Link className="link-text link-text-white" to="/auth/forgot-password"> 
+            Send reset link
+          </Link>
+        </div>
+
+        <div className='form-group mt-1'>
           <button type="submit" className='btn btn-white-bd-transparent width-100'>
             Login
           </button>
         </div>
+
+        <div className='form-group mt-1'>
+          Don't have an account yet?&nbsp;
+          <Link className="link-text link-text-white" to="/auth/create-account"> 
+            Create one here 
+          </Link>
+        </div>
+
       </form>
-    </div>
+    </Layout>
   )
 }
 
